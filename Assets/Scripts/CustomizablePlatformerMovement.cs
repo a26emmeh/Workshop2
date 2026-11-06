@@ -27,7 +27,7 @@ public class CustomizablePlatformerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer = ~0; // ~0 is referring to EVERY layer.
     
     // Handle input
-    public bool controlEnabled { get; set; } = true; // You can edit this variable from Unity Events
+    [SerializeField] public bool controlEnabled = true; // You can edit this variable from Unity Events
     private Vector2 moveInput;
     private Vector2 velocity;
     private bool jumpInput;
