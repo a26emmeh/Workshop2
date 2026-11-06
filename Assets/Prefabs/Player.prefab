@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
   animator: {fileID: 440215161794383238}
-  body: {fileID: 0}
+  body: {fileID: 2860905248939670658}
 --- !u!1 &5634998917487227709
 GameObject:
   m_ObjectHideFlags: 0
