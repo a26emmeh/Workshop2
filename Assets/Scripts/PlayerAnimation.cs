@@ -1,10 +1,9 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private Rigidbody2D body;
     
     private bool IsIdle
     {
@@ -21,14 +20,7 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        // isIdle = true;
-        Vector2 velocity = rigidbody2D.linearVelocity;
-        Debug.Log(velocity);
+        Vector2 velocity = body.linearVelocity;
         IsIdle = velocity.x == 0;
-    }
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        // IsIdle = false;
     }
 }
