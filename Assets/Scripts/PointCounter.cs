@@ -1,6 +1,6 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PointCounter : MonoBehaviour
 {
@@ -8,6 +8,7 @@ public class PointCounter : MonoBehaviour
     private int points = 0;
 
     public TextMeshPro text;
+    public UnityEvent onDone;
 
     private void UpdateText()
     {
@@ -15,6 +16,7 @@ public class PointCounter : MonoBehaviour
         if (remaining <= 0)
         {
             text.text = "You win!";
+            onDone.Invoke();
             return;
         }
         
