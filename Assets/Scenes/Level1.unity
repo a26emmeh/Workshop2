@@ -2821,7 +2821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ComponentVersion: 3
+  m_ComponentVersion: 2
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
@@ -2887,8 +2887,9 @@ GameObject:
   - component: {fileID: 631405679}
   - component: {fileID: 631405678}
   - component: {fileID: 631405677}
+  - component: {fileID: 631405680}
   m_Layer: 0
-  m_Name: Instructions
+  m_Name: Hud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2914,7 +2915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: collect coins to win
+  m_text: collect 2 more coins to win
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4047bd3d21c6614ba07ddef2f38c61e, type: 2}
   m_sharedMaterial: {fileID: -42622527399692785, guid: c4047bd3d21c6614ba07ddef2f38c61e, type: 2}
@@ -3054,9 +3055,22 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.21, y: 2.43}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 4, y: 2.43}
+  m_SizeDelta: {x: 25, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &631405680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631405676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffc09d2bd87f984e92c571bf2ecba8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  text: {fileID: 631405677}
 --- !u!4 &1000713919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3433285611547553624, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
@@ -3070,6 +3084,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1857592656}
     m_Modifications:
+    - target: {fileID: 1133432783997806440, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133432783997806440, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133432783997806440, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 631405680}
+    - target: {fileID: 1133432783997806440, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: Collect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133432783997806440, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: PointCounter, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133432783997806440, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1351211068169887497, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
       propertyPath: m_Name
       value: Right
@@ -3985,6 +4023,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1857592656}
     m_Modifications:
+    - target: {fileID: 1133432783997806440, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 631405680}
     - target: {fileID: 1351211068169887497, guid: 7dfa23b7b9fb7d8469516419171ac4da, type: 3}
       propertyPath: m_Name
       value: Left
